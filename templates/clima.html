@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>CLIMA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@700&family=Jersey+10&family=Micro+5&family=Press+Start+2P&display=swap');
+        </style>
+        
+</head>
+
+<body class="{{ periodo_dia }}">
+
+    <main class="painel">
+        <h1>CLIMA</h1>
+        <div class="cartao">
+            <form method="post">
+                <div class="container">
+                    <input type="text" name="city_name" id="city_name" class="input" required>
+                    <label for="city_name" class="label">Nome Da Cidade</label>
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+
+            {% if error_message %}
+            <p style="color: rgb(253, 119, 119); font-size: 15px">{{ error_message }}</p>
+            {% elif weather_data %}
+            <h2>Clima em {{ weather_data.city_name }}</h2>
+            <p>Clima: {{ weather_data.main_weather }}</p>
+            <p>Temperatura: {{ weather_data.temperature }} °C</p>
+            <img src="{{ weather_data.icon }}" alt="Ícone do clima">
+            {% endif %}
+        </div>
+    </main>
+
+</body>
+
+</html>

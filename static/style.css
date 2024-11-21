@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.manha {
+    background-image: url('../static/imagens/amanhecer_fundo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.manha h1 {
+    color: rgba(108, 196, 255, 0.849);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.manha h2 {
+    color: black;
+}
+
+body.manha .label {
+    color: black;
+}
+
+body.manha button {
+    color: black;
+}
+
+body img {
+    border: none;
+    border-radius: 18px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+body.tarde {
+    background-image: url('../static/imagens/tardecer_fu.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.tarde h1 {
+    color: rgba(255, 167, 96, 0.705);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.tarde h2,
+.label {
+    color: rgb(255, 255, 255);
+}
+
+body.tarde p {
+    color: rgb(255, 255, 255);
+}
+
+body.tarde input {
+    color: white;
+}
+
+body.noite {
+    background-image: url('../static/imagens/noite_fu.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.noite h1 {
+    color: rgba(236, 68, 236, 0.705);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.noite input {
+    color: white;
+}
+
+
+body.noite p,
+h2,
+label,
+button {
+    color: rgb(231, 229, 229);
+
+}
+
+.painel {
+    height: 85vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.cartao {
+    border: solid 0px;
+    border-radius: 18px;
+    text-align: center;
+    height: auto;
+    width: 10rem;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(255, 255, 255, 0.185);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+
+
+}
+
+.cartao h1 {
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cartao h2 {
+    max-width: 100%;
+    text-align: center;
+}
+
+#city_name {
+    max-width: 90%;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    position: relative;
+    color: rgb(231, 229, 229);
+}
+
+.container .label {
+    font-size: 12px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input {
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+    border: 2px solid transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4),
+        inset 3px 3px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid~.label,
+.container .input:focus~.label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4),
+        inset 3px 3px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+button {
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: rgb(231, 229, 229);
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: 18px;
+    transition: ease-out 0.2s;
+}
